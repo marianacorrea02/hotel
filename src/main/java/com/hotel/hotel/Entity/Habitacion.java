@@ -26,20 +26,15 @@ public class Habitacion {
     @Column
     private int cupo;
 
+    @Column
+    private boolean disponible;
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public SedeHotel getSedeId() {
-        return sedeId;
-    }
-
-    public void setSedeId(SedeHotel sedeId) {
-        this.sedeId = sedeId;
     }
 
     public Tipo getTipoId() {
@@ -56,6 +51,22 @@ public class Habitacion {
 
     public void setCupo(int cupo) {
         this.cupo = cupo;
+    }
+
+    public boolean isDisponible() {
+        return disponible;
+    }
+
+    public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+    }
+
+    public SedeHotel getSedeId() {
+        return sedeId;
+    }
+
+    public void setSedeId(SedeHotel sedeId) {
+        this.sedeId = sedeId;
     }
 
     

@@ -1,5 +1,7 @@
 package com.hotel.hotel.Entity;
 
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -14,6 +16,9 @@ import jakarta.persistence.Table;
 public class Reserva{
     @Id
     private Long id;
+
+    @Id 
+    private Date fecha;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "sede_id")
@@ -68,6 +73,14 @@ public class Reserva{
 
     public void setNum_personas(int num_personas) {
         this.num_personas = num_personas;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
 
     

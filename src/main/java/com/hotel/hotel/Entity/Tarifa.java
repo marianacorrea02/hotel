@@ -1,5 +1,7 @@
 package com.hotel.hotel.Entity;
 
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -13,6 +15,12 @@ import jakarta.persistence.Table;
 public class Tarifa {
     @Id
     private Long id;
+
+    @Column 
+    private Date fechaInicio;
+
+    @Column
+    private Date fechaFin;
 
     @Column
     private double precio;
@@ -78,6 +86,22 @@ public class Tarifa {
 
     public void setNum_personas(int num_personas) {
         this.num_personas = num_personas;
+    }
+
+    public Date getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public void setFechaInicio(Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public Date getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(Date fechaFin) {
+        this.fechaFin = fechaFin;
     }
 
     
